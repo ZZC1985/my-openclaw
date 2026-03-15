@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "lastTouchedVersion": "0.1.8-fix.3",
+    "lastTouchedAt": "2026-03-13T09:51:55.249Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-13T09:51:54.952Z",
+    "lastRunVersion": "0.1.8-fix.3",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "deepseek:default": {
+        "provider": "deepseek",
+        "mode": "api_key",
+        "api_key": "sk-bce6e16455be40c3af8ae6a537514dd5"
+      }
+    },
+    "order": ["deepseek:default"]
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-chat",
+            "name": "DeepSeek Chat",
+            "reasoning": false,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxOutputTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "model": {
+      "primary": "deepseek/deepseek-chat"
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {},
+  "gateway": {
+    "port": 10000,
+    "mode": "local",
+    "bind": "0.0.0.0",
+    "auth": {
+      "mode": "token",
+      "token": "wd881226"
+    },
+    "tailscale": "off"
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {},
+    "installs": {}
+  }
+}
